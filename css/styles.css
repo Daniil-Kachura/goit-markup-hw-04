@@ -1,0 +1,477 @@
+
+/* палитра кольорів */
+:root{
+--background-color:#ffffff;
+--text-color:#212121;
+--hover-color:#2196F3;
+--border-color:#ECECEC;
+--textlogo-color: #000000;
+--mail-tel-color:#757575;
+--background-header-color:#2F303A;
+--text-color-btn:#ffffff;
+--background-color-btn: #188CE8;
+--active-btn-text:#000000;
+--active-btn-shadov:#00000026;
+--boxshadov-clor1:#0000001f;
+--boxshadov-clor2:#00000024;
+--boxshadov-clor3:#00000033;
+--text-mail-footer:#ffffff99;
+--background-portfolio:#E5E5E5;
+--button-color-style:#F5F4FA;
+--shadov-btn:#00000026;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+
+}
+	/* body- те що чаще застосовується */
+body{
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+	letter-spacing: 0.03em;
+	background-color: var(--background-color);
+	color:var(--text-color);
+}
+
+	/* header- висота, бордер та фон */
+.header{
+	
+	background-color: var(--background-color);
+	border-bottom: 1px solid var(--border-color);
+}
+
+a{
+	text-decoration: none; 
+}
+
+ul{
+	padding-left: 0;
+	margin: 0;
+
+	list-style: none;
+	text-decoration: none;
+
+}
+.container{
+	width: 1200px;
+	padding:0 15px;
+
+	margin-left: auto;
+	margin-right: auto;
+
+}
+
+.section{
+   padding: 94px 0;
+}
+.section-no-pading{
+	padding-bottom: 0;
+}
+
+	/* пораховано интерлиньяж (поділив вbсоту на розмір тесту) */
+.logo-start{ 
+
+	font-family: 'Raleway';
+	font-size: 26px;
+	line-height: 1.19;
+	color: var(--hover-color);
+	
+}
+
+.logo-end{
+	color: var(--active-btn-text);
+}
+
+.styless-nav .style-list{
+
+	display: flex;
+	margin-left: 95px;
+
+}
+
+.main-nav{
+	display: flex;
+	align-items: center;
+}
+
+/* Крайняяя геометрия- обрезали лишние отступы, оябзательно!!!
+ 1)ЦЕ ВАРІАНТ СУСІДА, КОЛИ ТИ ЗАДАЄШ ВСІМ СУСІДНІМ ЕЛЕМЕНТАМ ВІДСТУП */
+
+.styless-nav .style-item + .style-item {
+	margin-left: 50px;
+}
+
+/*
+2)НАЙЛІПШИЙ ВАРІАНТ. КОЛИ ТИ ЗАДАЕШЬ ВІДСТУП ВСІМ КРІМ ОСТАННЬГО
+
+ .styless-nav .style-item:not(:last-child){
+	margin-right: 50px;
+} */
+
+
+/* 
+3) ЦЕЙ ОДИН З ВАРІАНТІВ 
+.styless-nav .style-item:last-child{
+	margin-right: 0;
+} */
+
+	/* наведення та табуляція для нав та кнопок у портфоліо */
+.style-item :hover,
+.style-item :focus
+{
+	color: var(--hover-color);
+}
+
+	/* колір лінків у хедері-----что бЫ удобнее было попадать 
+	на сыылке сделали ее блочным елементом и добавили падинг сверху и снизу */
+.nav-link
+{
+	display: block;
+	padding-top: 32px;
+	padding-bottom: 32px;
+
+	font-weight: 500;
+	line-height: 1.14;
+	letter-spacing: 0.02em;
+	color: var(--text-color);
+	
+}
+
+.acctive_nav_link
+{
+	color: var(--hover-color);
+}
+.auth-nav{
+	display: flex;
+	margin-left: auto;
+}
+.style-list .style-item + .style-item{
+	margin-left: 50px;
+}
+	/* колір тексту для меіл та тел */
+.contact-link{
+	color: var(--mail-tel-color);
+	font-weight: 500;
+	line-height: 1.14;
+	letter-spacing: 0.02em;
+}
+
+	/* main styles */
+
+.section-order{
+
+	background-color: var(--background-header-color);
+
+	padding-top: 200px; 
+	padding-bottom: 200px;
+}
+.hero-title{
+	font-weight: 900;
+	font-size: 44px;
+	line-height: 1.36;
+	text-align: center;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	color: var(--background-color);
+
+	width: 696px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0;
+	margin-bottom: 40px;
+}
+
+	/* Шапка с кнопкой */
+.hero-btn{
+	display: flex;
+	align-items: center;
+	text-align: center;
+	padding: 10px 32px;
+	margin: 0 auto;
+	border: 0;
+
+	color: var(--background-color);
+	background-color: var(--hover-color);
+	box-shadow: 0px 4px 4px var(--shadov-btn);
+	border-radius: 4px;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 1.87;
+	letter-spacing: 0.06em;
+	
+	cursor: pointer;
+}
+
+.hero-btn:hover,
+.hero-btn:focus
+{
+	color: var(--text-color-btn);
+	background-color: var(--background-color-btn);
+	box-shadow: 0px 4px 4px var(--active-btn-shadov);
+	border-radius: 4px;
+}
+
+.hero-btn:active{
+	color: var(--text-color-btn);
+	background-color: var(--background-color-btn);
+}
+
+	/* Особенности */
+	/* заголовок не наследет размери текста  */
+	
+.peculiarities-list{
+	display: flex;
+	align-items: center;	
+
+}
+.peculiarities-list .peculiarities-item + .peculiarities-item{
+	margin-left: 30px;
+}
+
+.peculiarities-item{
+		
+}
+
+.peculiarities-title{
+	margin-bottom: 10px;
+
+	line-height: 1.14;
+	text-transform: uppercase;
+	font-size: 14px;
+
+}
+
+.peculiarities-text{
+	line-height: 1.71;
+	color: var(--mail-tel-color);
+}
+
+/* Чем мы занимаемся */
+
+.section-titel{
+	margin-bottom: 50px;
+	font-size: 36px;
+	line-height: 1.16;
+	text-align: center;
+}
+
+.style-work-list{
+	display: flex;
+}
+
+.work-item{
+	display: block;
+	width: 370px;
+}
+
+.style-work-list .work-item + .work-item{
+	margin-left: 30px;
+   
+}
+
+   		 /* Наша команда */
+ .team{
+	background-color: #F5F4FA;
+ }  
+
+.team-list{
+	display: flex;
+
+}
+.team-list .team-item + .team-item{
+	margin-left: 30px;
+}
+
+.team-item{
+	width: 270px;
+	background-color: var(--background-color);
+
+	/* material shadow v1 */
+	box-shadow:
+	0px 1px 3px var(--boxshadov-clor1),
+	0px 1px 1px var(--boxshadov-clor2),
+	0px 2px 1px var(--boxshadov-clor3);
+	border-radius: 0px 0px 4px 4px;
+}
+
+.name-team{
+	padding-top: 30px;
+	margin-bottom: 10px;
+
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 1.18;
+	text-align: center;
+}
+
+.position-team{
+	padding-bottom: 30px;
+
+	font-size: 16px;
+	line-height: 1.18;
+	text-align: center;
+	color: var(--mail-tel-color);
+}
+
+/* скрыть заголовок */
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+						/* ПОРТФОЛІО */
+
+/* колір фону для партфоліо */
+
+.btn-list{
+	display: flex;
+	
+	justify-content: center;
+	margin-bottom: 50px;
+	
+}
+
+.btn-list .btn-item + .btn-item{
+	margin-left: 8px;
+}
+
+.btn-item:nth-last-child(-n +1){
+margin-right: 0;
+	
+}
+/* колір тіней кнопки при наведені у портфоліо */
+.style-button{
+	padding:6px 22px;
+
+	
+	border-radius: 4px;
+	font-family: 'Roboto';
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 1.63;
+	text-align: center;
+	background-color: var(--button-color-style);
+	color:  var(--text-color);
+	cursor: pointer;
+	border: 0;
+	
+}
+
+.style-button:hover,
+.style-button:focus
+{
+	box-shadow: 
+	0px 3px 1px var(--boxshadov-clor1),
+	0px 1px 2px var(--boxshadov-clor2),
+	0px 2px 2px var(--boxshadov-clor3);
+
+	color: var(--background-color);
+	background-color: var(--hover-color);
+}
+
+.active-btn{
+	background-color: var(--hover-color);
+	color: var(--background-color);
+}
+					/* Наши работы */
+.project-list{
+	display: flex;
+	flex-wrap: wrap;
+
+	margin: -15px;
+}
+
+.card-item{
+	margin-right: 30px;
+	margin-bottom: 30px;
+	background-color: var(--background-color);
+	border: 1px solid var(--border-color);
+
+				/* ФИКСИРОВАНАЯ ВЕРСТКА ШИРИНА */
+	margin: 15px;
+	width: calc((100% - 90px)/ 3);
+}
+
+.card-item:nth-child(3n){
+	margin-right: 0;
+	
+}
+
+.card-item:nth-last-child(-n +3){
+	margin-bottom: 0;
+}
+
+.card-title{
+	padding-top: 20px;
+	padding-left: 24px;
+	padding-right: 24px;
+	margin-bottom: 4px;
+	
+	font-size: 18px;
+	line-height: 2;
+	/* identical to box height, or 200% */
+	letter-spacing: 0.06em;
+	
+}
+
+.card-text{
+	padding-left: 24px;
+	padding-right: 24px;
+	padding-bottom: 20px;
+
+	font-size: 16px;
+	line-height: 2x;
+	/* identical to box height, or 188% */
+	letter-spacing: 0.03em;
+	color: var(--mail-tel-color);
+	
+}
+        /* -- футер - */
+
+.footer{
+	padding-top: 60px;
+	padding-bottom: 60px;
+	background: var(--background-header-color);
+}
+
+.footer-logo{
+	display: block;
+	margin-bottom: 20px;
+}
+.logo-footer, .adress-link{
+	
+	color: var(--background-color);
+	font-style: normal;
+	
+}
+
+.adress-link{
+	
+	display: block;
+	margin-bottom: 9px;
+}
+
+.auth-footer .footer-item + .footer-item{
+	margin-top: 9px;
+}
+
+.mail-footer{
+	color:var(--text-mail-footer); 
+	text-decoration: none; 
+}
+
+.mail-footer:hover,
+.mail-footer:focus
+{
+	color: var(--hover-color);
+}
