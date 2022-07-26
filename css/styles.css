@@ -26,8 +26,8 @@
   --border-project-list3: rgba(0, 0, 0, 0.16);
   --social-link-footer: rgba(255, 255, 255, 0.1);
 }
-
-/Обнулення стилів браузера/ html {
+/* /Обнулення стилів браузера/ */
+ html {
   box-sizing: border-box;
 }
 
@@ -305,11 +305,9 @@ body {
   display: flex;
   align-items: center;
 }
+
 .peculiarities-list .peculiarities-item + .peculiarities-item {
   margin-left: 30px;
-}
-
-.peculiarities-item {
 }
 
 .peculiarities-title {
